@@ -32,21 +32,23 @@ const cardData = [
 
 export function Cards() {
   return (
-    <section className="grid grid-cols-4 gap-4 py-[160px] max-w-[1440px] mx-auto">
+    <section className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8 py-12 sm:py-20 lg:py-[160px] max-w-[375px] sm:max-w-[810px] lg:max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-0">
       {cardData.map((card, index) => (
         <div 
           key={index}
-          className="border rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
+          className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)] border rounded-lg overflow-hidden shadow-lg transition-all duration-300 cursor-pointer hover:bg-gray-900 hover:text-white"
         >
           <img 
             src={card.image}
             alt={card.title}
-            className='w-full h-48 object-cover'
+            className='w-full h-48 object-cover hover:scale-110 transition-all duration-300'
           />
           <div className='p-5'>
-            <h3 className='text-xl font-bold mb-2'>{card.title}</h3>
-            <p className='mb-14'>{card.description}</p>
-            <p className='text-gray-400'>{card.description2}</p>
+            <h3 className='text-lg sm:text-xl font-bold mb-2'>{card.title}</h3>
+            <p className='mb-4 sm:mb-8 md:mb-14'>{card.description}</p>
+            <div>
+              <p className='text-gray-400 text-sm sm:text-base'>{card.description2}</p>
+            </div>
           </div>
         </div>
       ))}
