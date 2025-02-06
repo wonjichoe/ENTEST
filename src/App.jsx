@@ -18,7 +18,7 @@ function App() {
         <Cards />
       </main>
 
-      <footer className='bg-1c1d1c'>
+      <footer className='bg-[#1c1d1c]'>
         <Footer />
       </footer>
     </BrowserRouter> 

@@ -32,7 +32,7 @@ const cardData = [
 
 export function Cards() {
   return (
-    <section className="grid grid-cols-4 gap-4 p-[160px] max-w-[1440px] mx-auto">
+    <section className="grid grid-cols-4 gap-4 py-[160px] max-w-[1440px] mx-auto">
       {cardData.map((card, index) => (
         <div 
           key={index}
