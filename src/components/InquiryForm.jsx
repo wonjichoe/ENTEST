@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoIosArrowDown, IoMdArrowRoundForward } from 'react-icons/io'
 import { FaCheck } from "react-icons/fa6";
+import MovingCircle from './MovingCircle';
 
 export const InquiryForm = () => {
   const [formData, setFormData] = useState({ 
@@ -29,8 +30,13 @@ export const InquiryForm = () => {
   };
 
   return (
-    <section className="bg-[#f5f5f5] py-12 sm:py-20 lg:py-[160px]">
-      <div className="flex flex-col lg:flex-row justify-between max-w-[375px] sm:max-w-[810px] lg:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#f5f5f5] py-12 sm:py-20 lg:py-[160px] relative overflow-hidden">
+      <div>
+        <MovingCircle color="#0163c6" size={400} speed={1.5} initialX="-100" initialY="-50" />
+        <MovingCircle color="#000000" size={200} speed={2.2} initialX="50%" initialY="10%" />
+        <MovingCircle color="#cccccc" size={300} speed={1.8} initialX="80%" initialY="60%" />
+      </div>
+      <div className="flex flex-col lg:flex-row justify-between max-w-[375px] sm:max-w-[810px] lg:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div>
           <h2 className="text-4xl sm:text-5xl lg:text-7xl  font-bold text-[#0163c6]">Contact us</h2>
           <div className="text-lg sm:text-xl lg:text-2xl mt-6 sm:mt-8 lg:mt-10 mb-6 sm:mb-8 text-gray-400 font-bold">궁금하신 사항을 남겨주세요!<br />확인 후 빠른 답변 드리겠습니다.</div>
