@@ -11,14 +11,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <header className="fixed top-0 left-0 w-full z-10 bg-white">
+      <header className="fixed top-0 left-0 w-full z-10 bg-white bg-opacity-90">
         <Header />
       </header>
 
-      <main className="mt-[53px]">
+      <main className="mt-[80px]">
         <IntroCarousel/>
         <Cards />
-        <FAQSection />
+        {/* <FAQSection /> */}
         <InquiryForm />
       </main>
 

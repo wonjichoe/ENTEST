@@ -3,7 +3,7 @@ import logo from '@assets/images/logo.svg'
 
 export function Header() {
   return (
-      <div className="h-[55px] flex justify-between items-center px-4 sm:px-8 md:px-[60px]">
+      <div className="h-[80px] flex justify-between items-center px-4 sm:px-8 md:px-[60px] border-b-2">
         <h1>
           <Link to="./">
             <img src={logo} alt="Logo" className="w-24 h-auto sm:w-32 md:w-[137px]"/>
