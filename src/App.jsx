@@ -4,6 +4,8 @@ import { IntroCarousel } from './components/IntroCarousel'
 import { Header } from './components/Header'
 import { Cards } from './components/Cards'
 import { Footer } from './components/Footer'
+import { FAQSection } from './components/FAQSection'
+import { InquiryForm } from './components/InquiryForm'
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <main className="mt-[53px]">
         <IntroCarousel/>
         <Cards />
+        <FAQSection />
+        <InquiryForm />
       </main>
 
       <footer className='bg-[#1c1d1c]'>
